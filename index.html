@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a7a0403e73.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: transparent;
+        font-family: "Open Sans", sans-serif;
+        width: 595px;
+        height: 842px;
+
+        padding-left: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-weight: normal;
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 10px;
+      }
+
+      header {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        border-bottom: 0.5px solid #c7c7c7;
+        height: 60px;
+      }
+
+      #header img {
+        height: 25px;
+        width: 118px;
+      }
+      .data-documento {
+        color: #7b7b7b;
+        text-align: left;
+      }
+      .data-documento p {
+        margin: 0;
+        font-weight: 300;
+      }
+
+      #procuracao {
+        flex-direction: row;
+        display: flex;
+        border-bottom: 0.5px solid #c7c7c7;
+        height: 120px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .procuracao-itens {
+        margin-left: 20px;
+      }
+
+      #procuracao h2 {
+        margin: 0;
+      }
+      #procuracao p {
+        margin-top: 0;
+        color: #7b7b7b;
+      }
+
+      #qr-code {
+        height: 99.25px;
+        width: 98px;
+        float: right;
+        margin-right: 30px;
+      }
+      #relatorio-assinaturas {
+        padding-left: 20px;
+      }
+      #relatorio-assinaturas i {
+        color: #09e01b;
+        width: 18.33px;
+        height: 18.33px;
+      }
+      .assinatura {
+        display: flex;
+        border: 0.5px solid #c7c7c7;
+        border-radius: 7px;
+        margin-right: 30px;
+        width: 120px;
+        height: 120px;
+        text-align: center;
+        float: right;
+        justify-content: center;
+        align-items: flex-end;
+      }
+      .assinatura h2 {
+        color: #7b7b7b;
+        font-weight: 700;
+        font-size: 10px;
+      }
+
+      .relatorio-assinaturas-itens {
+        display: flex;
+        margin-top: -10px;
+        flex-direction: column;
+      }
+
+      .linha-itens {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+      }
+      #coluna-itens {
+        color: #7b7b7b;
+      }
+      .coluna-item {
+        font-weight: 300;
+        flex-direction: row;
+        display: flex;
+        margin: 0;
+      }
+
+      .coluna-item p {
+        margin-top: 0;
+      }
+
+      .name {
+        font-weight: 700;
+        margin-right: 4px;
+        text-indent: 20px;
+      }
+      .autentificacao {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-bottom: 0.5px solid #c7c7c7;
+        margin-left: 20px;
+      }
+
+      .autentificacao img {
+        width: 104px;
+        height: 124px;
+        margin-bottom: 20px;
+      }
+      .autentificacao h2 {
+        font-size: 12px;
+        padding: 3px;
+      
+      }
+
+      .self-reconhecimento-facial {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 50%;
+      
+      }
+      .self-documento {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        width: 50%;
+      }
+      .verificacao {
+        margin-left: 20px;
+        border-bottom: 0.5px solid #c7c7c7;
+      }
+      .verificacao-itens i {
+        color: #000;
+        height: 9.99px;
+        width: 9.99px;
+        margin: 0 5px 0 20px  ;
+      }
+
+      .verificacao p {
+        color: #7b7b7b;
+
+      }
+      #logo-icp img {
+        width: 70px;
+        height: 52px;
+        float: right;
+        margin-right: 120px;
+
+      }
+
+      .tipo-item {
+        margin: 15px 0 0 20px ;
+      }
+      .tipo-item p {
+        color: #7b7b7b;
+        margin: 0;
+      }
+
+      .item {
+        font-weight: 300;
+      }
+
+      .nome-item {
+        font-weight: 700;
+      }
+
+      #footer {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+      }
+      #footer img {
+        width: 118px;
+        height: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <img
+        src="https://media.discordapp.net/attachments/785566892194398278/1063184601239015524/logo-nome-3.png?width=1440&height=308"
+        alt="Logo ReclamaJus"
+      />
+      <h1 id="titulo-relatorio-assinatura">Relatório de Assinatura</h1>
+      <div class="data-documento">
+        <p>Documento criado em:</p>
+        <p>09 de Agosto de 2022 - 18:05</p>
+      </div>
+    </header>
+    <section id="procuracao">
+      <div class="procuracao-itens">
+        <div id="procuracao-texto">
+          <h2>Procuração Carlos José.pdf</h2>
+          <p>Documento Número: 1659993561822x724641545529327600</p>
+        </div>
+      </div>
+      <img
+        id="qr-code"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAYAAABRRIOnAAAAAklEQVR4AewaftIAAAOKSURBVO3BQY5jiRUDwcwH3f/KdC+84OoDglTlmTYjzB/M/NcxU46ZcsyUY6YcM+WYKcdMOWbKMVOOmXLMlGOmHDPlmCnHTHnxIZXflIRPqLwjCU9UWhKaym9KwieOmXLMlGOmvPiyJHyTyjtU3pGEJyrflIRvUvmmY6YcM+WYKS9+mMo7kvAOlSdJaCqfSEJT+YTKO5Lwk46ZcsyUY6a8+Mskoak8UWlJaEl4koS/yTFTjplyzJQXf7kkNJUnKi0JT1RaEv7NjplyzJRjprz4YUn4TSrvSEJTaSo/KQn/JMdMOWbKMVNefJnK/1ISmkpLQlNpSWgqLQlN5R0q/2THTDlmyjFTzB/8i6l8IglNpSXh/8kxU46ZcswU8wcfUGlJaCrflITfpPIkCU9UvikJP+mYKcdMOWaK+YMvUnmShE+otCQ0lSdJ+CaVloQnKi0J71BpSfimY6YcM+WYKS9+mUpLwhOVloSm8ptUWhKaSkvCE5UnSXii0pLwiWOmHDPlmCkvviwJTaUloak8ScI3qTxJQlNpSWgqn0jCO5LQVL7pmCnHTDlmivmDD6g8SUJT+UQSmkpLQlNpSfhJKk+S0FRaEprKO5LwiWOmHDPlmCkvviwJTaUloak8SUJTaUn4hMo7kvAkCU9UWhKaSktCU2lJ+KZjphwz5ZgpL35YEj6h0pLQVD6RhKbyROUdSXii8gmVloRPHDPlmCnHTHnxy1RaEppKS0JTaUl4ovJE5UkSmspPSsKTJDSVbzpmyjFTjpny4oeptCQ0lScqLQlN5ZuS0FQ+ofIJlZaEloRvOmbKMVOOmWL+4F9M5R1J+ITKkyS8Q+VJEn7TMVOOmXLMlBcfUvlNSWhJeIfKkyQ8SUJTeaLSkvAkCU3lHUn4xDFTjplyzJQXX5aEb1J5otKS8I4kPFFpSXhHEt6h0pLwm46ZcsyUY6a8+GEq70jCP0kSmsoTlU8koam0JDSVloRPHDPlmCnHTHnxl1NpSWgqn0hCU3mShKbSVJ6o/KRjphwz5ZgpL/4yKi0JT5LQVJ4koam0JLwjCU3lSRKayjcdM+WYKcdMefHDkvCTkvAJlSdJaCpPVL4pCb/pmCnHTDlmyosvU/lNKu9IwpMkNJWWhCcqLQlN5R0qv+mYKcdMOWaK+YOZ/zpmyjFTjplyzJRjphwz5Zgpx0w5ZsoxU46ZcsyUY6YcM+WYKf8B7SOFJl3T5SkAAAAASUVORK5CYII="
+        alt="QR code"
+      />
+    </section>
+    <section id="relatorio-assinaturas">
+      <h2 id="relatorio-titulo">Relatório das assinarturas</h2>
+      <div class="assinatura">
+        <h2>Assinatura</h2>
+      </div>
+
+      <div class="relatorio-assinaturas-itens">
+        <div class="linha-itens">
+          <h2>
+            <i class="fa-sharp fa-solid fa-circle-check"></i>Carlos José Silva
+            Santos Genaro Ivan Gatusso dos Santos(Assinou)
+          </h2>
+        </div>
+        <main id="coluna-itens">
+          <div class="coluna-item">
+            <p class="name">Data e Hora:</p>
+            <p>09/08/2022 - 18:50</p>
+          </div>
+          <div class="coluna-item">
+            <p class="name">Celular:</p>
+            <p>(71) 99999-9999</p>
+          </div>
+          <div class="coluna-item">
+            <p class="name">E-Mail:</p>
+            <p>carlosjose@hotmail.com</p>
+          </div>
+          <div class="coluna-item">
+            <p class="name">IP:</p>
+            <p>142.142.142.142</p>
+          </div>
+          <div class="coluna-item">
+            <p class="name">Geolocalização:</p>
+            <p>-8.082 / -34.9162</p>
+          </div>
+          <div class="coluna-item">
+            <p class="name">Dados do Dispositivo:</p>
+            <p>Chome / Android / dd5c9a09582dc7b18de5dbee566b38ae</p>
+          </div>
+        </main>
+      </div>
+    </section>
+    <section class="autentificacao">
+      <div class="self-reconhecimento-facial">
+        <h2>Reconhecimento Facial(Self) de Carlos José Santos</h2>
+        <img
+          src="https://media.discordapp.net/attachments/785566892194398278/1063184601704579102/captura-de-tela-2022-08-09-as-21.52-1.png"
+          alt="Foto do reconhecimento facial"
+        />
+      </div>
+      <div class="self-documento">
+        <h2>Foto Documento Pessoal de Carlos José Santos</h2>
+        <img
+          src="https://media.discordapp.net/attachments/785566892194398278/1063184601704579102/captura-de-tela-2022-08-09-as-21.52-1.png"
+          alt="Foto do documento oficial"
+        />
+      </div>
+    </section>
+    <section class="verificacao">
+      <h2 id="verificacao-titulo">Itens de Verificação</h2>
+      <div id="logo-icp">
+        <img
+          src="https://media.discordapp.net/attachments/785566892194398278/1063184599783579738/icp-brasil-slseguros-300x221-1.png"
+          alt="Logo icp Brasil"
+        />
+      </div>
+
+      <div class="verificacao-itens">
+        <p><i class="fa-solid fa-pen"></i>Assinatura na Tela</p>
+        <p><i class="fa-solid fa-camera"></i>Reconhecimento Facial (Self)</p>
+        <p><i class="fa-regular fa-image"></i>Foto Documento</p>
+      </div>
+    </section>
+    <section id="tipo-verificacao">
+      <div class="tipo-item">
+        <p class="nome-item">Hash do Documento (SHA256):</p>
+        <p class="item">
+          6ec48bdb305bff6225e8b6cfc9dbf1c4fbe4dccc18775ed79cd726a07cf1ca0c
+        </p>
+      </div>
+      <div class="tipo-item">
+        <p class="nome-item">Verificador de Autenticidade:</p>
+        <p class="item">
+          https://app.reclamajus.com.br/version-test/verificador_autenticidade/1660078814317x482929588398194700
+        </p>
+      </div>
+      <div class="tipo-item">
+        <p class="nome-item">
+          Verificador Instituto Nacional de Tecnologia da Informação:
+        </p>
+        <p class="item">https://verificador.iti.gov.br/</p>
+      </div>
+    </section>
+    <footer id="footer">
+      <img src="https://media.discordapp.net/attachments/785566892194398278/1063184601239015524/logo-nome-3.png?width=1440&height=308" alt="Logo ReclamaJus" />
+    </footer>
+  </body>
+</html>
